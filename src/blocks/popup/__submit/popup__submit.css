@@ -1,0 +1,43 @@
+.popup__submit {
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding-bottom: 18px;
+  padding-top: 14px;
+  transition: opacity .5s ease;
+}
+
+.popup__submit:hover {
+  opacity: 0.8;
+  transition: opacity linear;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__submit {
+    font-size: 14px;
+    line-height: 1.21;
+    margin-top: 45px;
+  }
+}
+
+/* .popup__submit {
+  margin-top: 47px;
+  padding-top: 16px;
+  padding-bottom: 13px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 2px;
+} */
