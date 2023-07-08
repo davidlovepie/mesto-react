@@ -1,12 +1,12 @@
-function PopupWithForm({ title, name, children, isOpen, onClose, buttonText, disabled}) {
+function PopupWithForm({ title, name, children, isOpen, onClose, buttonText, disabled, onSubmit, containerType}) {
 
   return (
    
     <div className={`popup popup_type_${name} ${isOpen && 'popup_opened'}`}  >
-    <div className="popup__container">
+    <div className={`popup__container ${containerType}`}>
       <button type="button" className="popup__close-button" onClick={onClose}></button>
       <h2 className="popup__title">{title}</h2>
-      <form className="popup__form" name={name}>
+      <form className="popup__form" name={name} onSubmit={onSubmit}>
         {children}
         <button className={`popup__submit ${disabled}`} type="submit">{buttonText}</button>
       </form>
