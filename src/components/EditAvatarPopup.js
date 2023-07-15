@@ -16,6 +16,12 @@ function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
     });
   } 
 
+  useEffect(() => {
+    if (isOpen) {
+      avatarRef.current.value = ""; // Очищаем значение поля
+    }
+  }, [isOpen]);
+
   return (
     <PopupWithForm
     onSubmit={handleSubmit}

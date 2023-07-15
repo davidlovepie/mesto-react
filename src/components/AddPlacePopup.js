@@ -26,6 +26,17 @@ function AddPlacePopup({ isOpen, onClose, onUpdateImage }) {
     });
   }
 
+  function handleReset() {
+    setLink("");
+    setName("");
+  }
+
+  useEffect(() => {
+    if (isOpen) {
+      handleReset();
+    }
+  }, [isOpen]);
+
   return (
     <PopupWithForm
     onSubmit={handleSubmit}
