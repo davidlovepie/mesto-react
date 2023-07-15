@@ -52,7 +52,7 @@ function Main({
           {cards.map((card, index) => {
             return (
               <Card
-                key={index}
+                key={card._id}
                 likes={card.likes}
                 link={card.link}
                 name={card.name}
