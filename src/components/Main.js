@@ -89,8 +89,6 @@ export default Main;
 
 // }
 
-
-
 // );
 
 // console.log('array2', array2)

@@ -44,14 +44,11 @@ function App() {
     api
       .deleteCard(selectedCard._id)
       .then((deletedCard) => {
-
         const filteredCards = cards.filter((item) => {
-
-        return selectedCard._id !== item._id;
+          return selectedCard._id !== item._id;
         });
-    
-        setCards(filteredCards);
 
+        setCards(filteredCards);
       })
       .catch((err) => {
         console.log(err); // выведем ошибку в консоль
@@ -111,7 +108,7 @@ function App() {
     api
       .postCard(obj)
       .then((result) => {
-        setCards([result, ...cards])
+        setCards([result, ...cards]);
       })
       .catch((err) => {
         console.log(err); // выведем ошибку в консоль
@@ -126,7 +123,7 @@ function App() {
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
     setIsEnlargeImagePopupOpen(false);
-    setIsDeletePopupOpen(false)
+    setIsDeletePopupOpen(false);
   }
 
   function handleEditAvatarClick() {
@@ -194,7 +191,6 @@ function App() {
           isOpen={isDeletePopupOpen}
           onClose={closeAllPopups}
         />
-
       </div>
     </CurrentUserContext.Provider>
   );
